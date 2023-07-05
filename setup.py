@@ -44,7 +44,7 @@ def build_ext(config):
     f_sources = ['pymc/flib.f','pymc/histogram.f', 'pymc/flib_blas.f', 'pymc/blas_wrap.f', 'pymc/math.f', 'pymc/gibbsit.f', 'cephes/i0.c',
                  'cephes/c2f.c','cephes/chbevl.c']
     if lapack_info:
-        config.add_extension(name='flib',sources=f_sources, extra_info=lapack_info, f2py_options=['skip:ppnd7'])
+        config.add_extension(name='flib',sources=f_sources, extra_info=lapack_info, f2py_options=['skip:', 'ppnd7', ':'])
 
     if not lapack_info or dist in ['bdist', 'sdist']:
         ##inc_dirs = ['blas/BLAS','lapack/double']

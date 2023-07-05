@@ -1174,6 +1174,7 @@ CF2PY THREADSAFE
 
       double precision tmp1
       double precision tmp2
+      double precision tmp3(iteracnt)
 
       real      ppnd7
 
@@ -1201,7 +1202,7 @@ CF2PY THREADSAFE
 *                                                                      *
 ************************************************************************
 
-        cutpt = empquant(original,iteracnt,qhat,work)
+        cutpt = empquant(original,iteracnt,qhat,tmp3)
 
 ************************************************************************
 *                                                                      *
